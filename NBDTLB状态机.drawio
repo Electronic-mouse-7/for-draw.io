@@ -1,0 +1,70 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36" version="28.2.9">
+  <diagram name="第 1 页" id="NrEzej7ueTMqdeKmkEhf">
+    <mxGraphModel dx="946" dy="644" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="f7TAT0ONg7S2ovn89VNc-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="f7TAT0ONg7S2ovn89VNc-1" target="f7TAT0ONg7S2ovn89VNc-2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f7TAT0ONg7S2ovn89VNc-5" value="当前周期在s_ready，当前周期发生了tlb Miss，则下一周期进入s_request状态" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="f7TAT0ONg7S2ovn89VNc-4" vertex="1" connectable="0">
+          <mxGeometry x="0.3263" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f7TAT0ONg7S2ovn89VNc-1" value="s_ready" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="150" y="190" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="f7TAT0ONg7S2ovn89VNc-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="f7TAT0ONg7S2ovn89VNc-2" target="f7TAT0ONg7S2ovn89VNc-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f7TAT0ONg7S2ovn89VNc-9" value="当前周期在s_request,当前周期检测到sfence，则下一周期进入s_ready" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="f7TAT0ONg7S2ovn89VNc-8" vertex="1" connectable="0">
+          <mxGeometry x="0.4146" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f7TAT0ONg7S2ovn89VNc-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="f7TAT0ONg7S2ovn89VNc-2" target="f7TAT0ONg7S2ovn89VNc-10" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f7TAT0ONg7S2ovn89VNc-12" value="当前周期在s_request，且PTW ready时，且没有sfence" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="f7TAT0ONg7S2ovn89VNc-11" vertex="1" connectable="0">
+          <mxGeometry x="-0.0148" y="3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f7TAT0ONg7S2ovn89VNc-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="f7TAT0ONg7S2ovn89VNc-2" target="f7TAT0ONg7S2ovn89VNc-13" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f7TAT0ONg7S2ovn89VNc-15" value="当前周期在s_request，且PTW ready时，但是有sfence" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="f7TAT0ONg7S2ovn89VNc-14" vertex="1" connectable="0">
+          <mxGeometry x="-0.5467" y="-3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f7TAT0ONg7S2ovn89VNc-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="f7TAT0ONg7S2ovn89VNc-2" target="f7TAT0ONg7S2ovn89VNc-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f7TAT0ONg7S2ovn89VNc-17" value="当前周期是s_request状态，当前周期检测到io.kill信号有效，那么下一周期回到s_ready状态" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="f7TAT0ONg7S2ovn89VNc-16" vertex="1" connectable="0">
+          <mxGeometry x="-0.6816" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f7TAT0ONg7S2ovn89VNc-2" value="s_request" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="310" y="460" width="140" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="f7TAT0ONg7S2ovn89VNc-10" value="s_wait" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="730" y="520" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="f7TAT0ONg7S2ovn89VNc-13" value="s_wait_invalidate" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="310" y="750" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="f7TAT0ONg7S2ovn89VNc-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.344;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="f7TAT0ONg7S2ovn89VNc-10" target="f7TAT0ONg7S2ovn89VNc-13" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f7TAT0ONg7S2ovn89VNc-19" value="如果当前周期处于s_wait状态，并且在当前周期检测到了sfence，那么下一周期进入s_wait_invalidate状态" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="f7TAT0ONg7S2ovn89VNc-18" vertex="1" connectable="0">
+          <mxGeometry x="-0.0427" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
